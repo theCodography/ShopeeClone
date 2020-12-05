@@ -2,6 +2,7 @@
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
+    --primary-color: #EE4d2d;
 }
 
 *{
@@ -35,6 +36,17 @@ html{
         opacity: 0;
     }
     to {
+        opacity: 1;
+    }
+}
+
+@keyframes openUp {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
         opacity: 1;
     }
 }

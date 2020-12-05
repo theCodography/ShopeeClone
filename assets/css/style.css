@@ -58,9 +58,110 @@
 .header__qr-img {
     width: 100%;
 }
-/* .header__qr-link {
 
-} */
+.header__notify {
+    position: absolute;
+    top: 160%;
+    width: 40rem;
+    border: 1px solid #d3d3d3;
+    background-color: var(--white-color);
+    right: 0;
+    cursor: default;
+    transform-origin: calc(100% - 20px) top;
+    animation: openUp ease-in 0.2s;
+    display: none;
+}
+
+.header__notify-header {
+    height: 4rem;
+    color: #666;
+    
+}
+.header__notify-header h3 {
+    font-weight: 200;
+    font-size: 1.4rem;
+    margin: 0 0 0 12px;
+    line-height: 4rem;
+}
+
+.header__notify-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.header__notify-item {
+    padding: .5rem 0;
+    background-color: rgba(238,75,43,.1);    
+}
+.header__notify-item:hover {
+    background-color: rgba(150,150,150,.1);
+}
+.isRead{
+    background-color: var(--white-color);
+}
+.header__notify-link {
+    display: flex;
+    text-decoration: none;
+    padding: 0 12px;
+}
+
+.header__notify-img {
+    width: 60px;
+    object-fit: contain;
+}
+
+.header__notify-info {
+    color: var(--text-color);
+    margin-left: 1.2rem;
+}
+
+.header__notify-content {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: .3rem;
+}
+
+.header__notify-description {
+    display: block;
+    font-size: 1.2rem;
+    opacity: 60%;
+}
+.header__notify-footer {
+    display: flex;
+    
+}
+.header__notify-footer-btn {
+    text-decoration: none;
+    font-weight: 400;
+    padding: .8rem .8rem;
+    margin: auto;
+}
+.header__notify-footer-btn:hover {
+    opacity: .5;
+}
+.header__notify::after {
+    content: "";
+    position: absolute;
+    border: 10px solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    top: -6.5%;
+    right: 4%;
+}
+.notify:hover .header__notify {
+    display: block;
+}
+
+.notify::before {
+    content: "";
+    position: absolute;
+    height: 1.6rem;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    transform: translateY(100%);
+}
+
 .item--bold {
     font-weight: 500;
 }
