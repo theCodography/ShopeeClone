@@ -30,7 +30,63 @@ html{
     display: flex;
     flex-wrap: wrap;
 }
+/** === MODAL === */
 
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    animation: fadeIn linear 0.2s;
+}
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+.modal__body {
+    --growth-form: 0.6;
+    --growth-to: 1;
+    margin: auto;
+    z-index: 100;
+    animation: growth linear 0.2s;
+}
+/* * === Button === */
+.btn {
+    min-width: 142px;
+    height: 36px;
+    color: var(--text-color);
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn:hover {
+    background-color: rgba(0,0,0,0.03);
+}
+.btn.btn--primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+.btn.btn--sizeS {
+    height: 3rem;
+    width: 18rem;
+    font-size: 1.2rem;
+}
+.btn-icon {
+    justify-content: flex-start;
+    padding: 10px 20px;
+}
+
+/** === Key Frame ===  */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -39,7 +95,14 @@ html{
         opacity: 1;
     }
 }
-
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-form));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
 @keyframes openUp {
     from {
         transform: scale(0);
